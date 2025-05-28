@@ -53,6 +53,5 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.TransformDirection(moveInput) * speed;
         _rigid.MovePosition(_rigid.position + move * Time.fixedDeltaTime);
-        Debug.DrawRay(transform.position, move * 2f, Color.red);
     }
 }
