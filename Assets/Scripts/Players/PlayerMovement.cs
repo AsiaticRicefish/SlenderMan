@@ -12,15 +12,22 @@ public class PlayerMovement : MonoBehaviour
    
     private bool isRunning; // 달리는 상태
 
+    private Animator _animator;
+    private PlayerFootstepHandler _footstepHandler;
+
     private void Start()
     {
         _rigid = GetComponent<Rigidbody>();
         _rigid.freezeRotation = true;
+
+        _animator = GetComponent<Animator>();
+        _footstepHandler = GetComponent<PlayerFootstepHandler>();
     }
 
     private void Update()
     {
         PlayerInput();
+        MoveAnimator();
     }
 
     private void FixedUpdate()
@@ -36,6 +43,10 @@ public class PlayerMovement : MonoBehaviour
         moveInput = new Vector3(moveX, 0, moveZ).normalized;
         isRunning = Input.GetKey(KeyCode.LeftShift);
 
+        if (_footstepHandler != null)
+        {
+            _footstepHandler.isRunning = isRunning;
+        }
     }
 
     private void Move()
@@ -54,4 +65,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.TransformDirection(moveInput) * speed;
         _rigid.MovePosition(_rigid.position + move * Time.fixedDeltaTime);
     }
+
+    private void MoveAnimator()
+    {
+        bool isMoving = moveInput.magnitude > 0f;
+
+        _animator.SetBool("IsWalk", isMoving && !isRunning);
+        _animator.SetBool("IsRun", isMoving && isRunning);
+    }
+
 }
