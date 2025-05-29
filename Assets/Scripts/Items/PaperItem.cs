@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PaperItem : Item
 {
+    [SerializeField] AudioSource paperAudio;
     public override void Interact()
     {
+        if (paperAudio != null)
+        {
+            paperAudio.Play();
+        }
+
         GameManager._instance.CollectNote();
-        Destroy(gameObject);
+        Destroy(gameObject, paperAudio.clip.length);
     }
 
     public override string GetInteractionText()

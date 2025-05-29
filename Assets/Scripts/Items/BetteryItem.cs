@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class BetteryItem : Item
 {
+    [SerializeField] AudioSource betteryAudio;
+
     public override void Interact()
     {
         FlashlightController flashlight = FindObjectOfType<FlashlightController>();
         if (flashlight != null) 
         {
+            if (betteryAudio != null)
+            {
+                betteryAudio.Play();
+            }
+
             flashlight.BatteryRecovery();
-            Destroy(gameObject);
+            Destroy(gameObject, betteryAudio.clip.length);
         }
     }
 

@@ -238,3 +238,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9005a2ce134654a4d82337060ffedaec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  betteryAudio: {fileID: 0}
