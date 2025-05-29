@@ -9,7 +9,7 @@ public class FlashlightController : MonoBehaviour
     [SerializeField] AudioSource switchSound;
     [SerializeField] Image[] batteryBars; // 배터리 UI 칸
 
-    public float maxBatteryTime = 3f;
+    public float maxBatteryTime = 60f;
     public float currentBatteryTime;
 
     private bool isOn;  // 손전등이 켜져 있는 상태

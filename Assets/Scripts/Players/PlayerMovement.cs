@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 1f;
-    [SerializeField] float runSpeed = 3f;
+    [SerializeField] float moveSpeed = 3f;
+    [SerializeField] float runSpeed = 5f;
 
     private Rigidbody _rigid;
     private Vector3 moveInput;
