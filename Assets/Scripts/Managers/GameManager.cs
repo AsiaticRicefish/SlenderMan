@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI paperCounterText;
 
+    [SerializeField] ItemSpawn paperSpawner;
+    [SerializeField] ItemSpawn betterySpawner;
+
+
     private void Awake()
     {
         if (_instance == null)
@@ -27,6 +31,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateNoteUI();
+        paperSpawner.SpawnItemCount(5);
+        betterySpawner.SpawnItemCount(2);
     }
 
     public void CollectNote()
