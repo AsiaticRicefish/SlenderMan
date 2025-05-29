@@ -26,17 +26,9 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     item.Interact();
                 }
-
                 return;
             }
         }
-
         interactionText.enabled = false;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, interactRange);
     }
 }
