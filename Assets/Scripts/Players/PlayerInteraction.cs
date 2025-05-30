@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    [SerializeField] float interactRange = 2f;
+    [SerializeField] float interactRange = 4f;
     [SerializeField] LayerMask interactLayer;
     [SerializeField] Camera cam;
     [SerializeField] TMP_Text interactionText;

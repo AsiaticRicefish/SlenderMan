@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 3f;
-    [SerializeField] float runSpeed = 5f;
+    [SerializeField] float moveSpeed = 4f;
+    [SerializeField] float runSpeed = 6f;
 
     private Rigidbody _rigid;
     private Vector3 moveInput;
    
-    private bool isRunning; // 달리는 상태
+    private bool isRunning;
 
     private Animator _animator;
     private PlayerFootstepHandler _footstepHandler;

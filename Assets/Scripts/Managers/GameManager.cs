@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] ItemSpawn betterySpawner;
 
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject gameClearPanel;
 
     private void Awake()
     {
@@ -67,13 +68,17 @@ public class GameManager : MonoBehaviour
 
     public void RetryGame()
     {
-        Time.timeScale = 1f; // 멈췄던 시간 되돌리기
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // 현재 씬 다시 로드
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Ending()
     {
-        Debug.Log("모든 쪽지를 모았습니다!");
-    }
+        Time.timeScale = 0f;
 
+        if (gameClearPanel != null)
+        {
+            gameClearPanel.SetActive(true);
+        }
+    }
 }
