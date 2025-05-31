@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject howToPlayPanel;
+    [SerializeField] GameObject gameSelectPanel;
 
     public void Update()
     {
@@ -13,16 +14,41 @@ public class UIManager : MonoBehaviour
         {
             HideHowToPlay();
         }
+
+        if (gameSelectPanel.activeSelf) 
+        {
+            HideGameSelect();   
+        }
+
     }
+
+    public void SecletGhostVillage()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void SelectChurch()
+    {
+        SceneManager.LoadScene("GameScene2");
+    }
+
 
     public void GameStart()
     {
-        SceneManager.LoadScene("GameScene");
+        gameSelectPanel.SetActive(true);
     }
 
     public void ShowHowToPlay()
     {
         howToPlayPanel.SetActive(true);
+    }
+
+    public void HideGameSelect()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameSelectPanel.SetActive(false);
+        }
     }
 
     public void HideHowToPlay()
