@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject gameClearPanel;
 
+    [SerializeField] private GameObject playerUI;
+
     private void Awake()
     {
         if (_instance == null)
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(true);
+            playerUI.SetActive(false);
         }        
     }
 
@@ -79,6 +82,7 @@ public class GameManager : MonoBehaviour
         if (gameClearPanel != null)
         {
             gameClearPanel.SetActive(true);
+            playerUI.SetActive(false);
         }
     }
 }
