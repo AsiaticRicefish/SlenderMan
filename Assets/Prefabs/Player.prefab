@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 2506877193936122847}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1651,7 +1651,7 @@ GameObject:
   - component: {fileID: 3036592429471141484}
   m_Layer: 0
   m_Name: SK_Military_Survivalist (11)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1737,6 +1737,7 @@ MonoBehaviour:
     m_Bits: 64
   cam: {fileID: 1802350252316082212}
   interactionText: {fileID: 0}
+  interactionCooldown: 0.5
 --- !u!54 &323065105597588005
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1816,7 +1817,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8700786d89e7ffe48826a0d9916b83d9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
