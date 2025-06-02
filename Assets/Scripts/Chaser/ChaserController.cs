@@ -58,7 +58,6 @@ public class ChaserController : MonoBehaviour
             animator.SetBool("IsWalk", isWalking);
         }
 
-
         // 순간이동
         if (timer > teleportCooldown)
         {
