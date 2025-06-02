@@ -32,6 +32,11 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("GameScene2");
     }
 
+    public void SelectTown()
+    {
+        SceneManager.LoadScene("GameScene3");
+    }
+
 
     public void GameStart()
     {
