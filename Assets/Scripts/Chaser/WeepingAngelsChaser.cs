@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Chaser2Controller : MonoBehaviour
+public class WeepingAngelsChaser : MonoBehaviour
 {
     [SerializeField] private Transform player;
     private NavMeshAgent agent;

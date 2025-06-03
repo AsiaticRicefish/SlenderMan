@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class ChaserController : MonoBehaviour
+public class TeleportChaser : MonoBehaviour
 {
     [SerializeField] Transform player;
     [SerializeField] float teleportCooldown = 7f;  // 순간이동 쿨타임

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Chaser3 : MonoBehaviour
+public class NormalChaser : MonoBehaviour
 {
     private Transform player;
     private NavMeshAgent agent;
