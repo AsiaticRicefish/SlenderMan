@@ -2706,7 +2706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cdc2dbbf849f8e4e99e4e4ab09157f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenuBgm: {fileID: 1403579112}
+  BackgroundSound: {fileID: 1403579112}
 --- !u!82 &1403579112
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3498,6 +3498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126200366712339687, guid: 26a279833cdaa7d4b9f599005136566c,
+        type: 3}
+      propertyPath: m_Speed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8240525536353721911, guid: 26a279833cdaa7d4b9f599005136566c,
         type: 3}

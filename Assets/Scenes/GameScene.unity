@@ -1817,11 +1817,22 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 7cfe88749f40947adab9f6792e99ee8f, type: 3}
+    - target: {fileID: 7348542168432891103, guid: 56c4f608f9451324eb7da1ec608e2e3e,
+        type: 3}
+      propertyPath: BackgroundSound
+      value: 
+      objectReference: {fileID: 1768146732719754995}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56c4f608f9451324eb7da1ec608e2e3e, type: 3}
+--- !u!82 &1768146732719754995 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5952919975965216275, guid: 56c4f608f9451324eb7da1ec608e2e3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1768146732719754994}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2103234061196512564
 PrefabInstance:
   m_ObjectHideFlags: 0

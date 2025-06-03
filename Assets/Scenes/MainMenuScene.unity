@@ -4440,7 +4440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cdc2dbbf849f8e4e99e4e4ab09157f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenuBgm: {fileID: 1888377895}
+  BackgroundSound: {fileID: 1888377895}
 --- !u!82 &1888377895
 AudioSource:
   m_ObjectHideFlags: 0
