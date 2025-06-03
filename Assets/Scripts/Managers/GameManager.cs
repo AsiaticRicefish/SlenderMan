@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject playerUI;
 
+    public bool isGameEnd = false;
+
     private void Awake()
     {
         if (_instance == null)
@@ -60,6 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        isGameEnd = true;
         Time.timeScale = 0f;
 
         if (gameOverPanel != null)
@@ -71,12 +74,14 @@ public class GameManager : MonoBehaviour
 
     public void RetryGame()
     {
+        isGameEnd = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Ending()
     {
+        isGameEnd = true;
         Time.timeScale = 0f;
 
         if (gameClearPanel != null)
