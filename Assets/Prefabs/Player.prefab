@@ -1717,8 +1717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4020f50cf3b5f3347acdc08703907357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  runSpeed: 5
+  moveSpeed: 4
+  runSpeed: 6
 --- !u!114 &3659291043918941435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0632b79a34da8474d8d10a36b5a89857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactRange: 3
+  interactRange: 4
   interactLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -2378,7 +2378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63c43d46ddb45f45a47bc144e7d2a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 300
   playerBody: {fileID: 3572947244754973124}
 --- !u!114 &8099619292940739274
 MonoBehaviour:

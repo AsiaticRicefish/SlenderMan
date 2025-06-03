@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    [SerializeField] public float mouseSensitivity = 100f;
+    private float mouseSensitivity;
     public Transform playerBody;
 
     float xRotation = 0f;
@@ -25,4 +25,11 @@ public class PlayerLook : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); 
         playerBody.Rotate(Vector3.up * mouseX); 
     }
+
+    public void SetSensitivity(float newSensitivity)
+    {
+        mouseSensitivity = newSensitivity;
+        PlayerPrefs.SetFloat("MouseSensitivity", newSensitivity);
+    }
+
 }
