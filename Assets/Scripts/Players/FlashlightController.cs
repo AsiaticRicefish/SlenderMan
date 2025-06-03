@@ -24,6 +24,7 @@ public class FlashlightController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager._instance.isGameEnd || Time.timeScale == 0f) return;
         FlashOnOff();
 
         if (isOn) DrainBattery(); // 켜져 있으면 배터리를 소모
