@@ -77,27 +77,12 @@ public class WeepingAngelsChaser : MonoBehaviour
             {
                 if (hit.transform == transform)
                 {
-                    // Ray에 내가 직접 맞음 → 실제로 "보고 있음"
+                    // Ray에 내가 직접 맞음 → 실제로 보고 있음
                     return true;
                 }
             }
         }
         // 시야 바깥 or 가로막혀 있음
         return false;
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (player == null) return;
-
-        // 플레이어 시야 방향
-        Gizmos.color = Color.green;
-        Vector3 start = player.position + Vector3.up * 1.6f;
-        Gizmos.DrawRay(start, player.forward * 5f);
-
-        // 플레이어 → 추격자 방향
-        Gizmos.color = Color.red;
-        Vector3 toChaser = (transform.position - start).normalized;
-        Gizmos.DrawRay(start, toChaser * 5f);
     }
 }

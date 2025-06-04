@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class TeleportChaser : MonoBehaviour
 {
     [SerializeField] Transform player;
-    [SerializeField] float teleportCooldown = 7f;  // 순간이동 쿨타임
-    [SerializeField] float followRange = 30f;       // 추적 시작 거리
-    [SerializeField] float gameOverDistance = 1f;   // 접촉 거리
+    [SerializeField] float teleportCooldown = 7f;
+    [SerializeField] float followRange = 30f;     
+    [SerializeField] float gameOverDistance = 1f;
 
     [SerializeField] AudioSource footstepSource;
     [SerializeField] AudioClip[] footstepClips;
@@ -22,8 +22,8 @@ public class TeleportChaser : MonoBehaviour
     [Header("Animation")]
     [SerializeField] Animator animator;
 
-    private float timer; // 순간 이동 타이머
-    private NavMeshAgent agent; // 추적 NavMesh 사용
+    private float timer; 
+    private NavMeshAgent agent;
 
     private void Start()
     {
@@ -37,7 +37,7 @@ public class TeleportChaser : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime; // 매 프레임마다 타이머를 증가시킴
+        timer += Time.deltaTime;
 
         float distance = Vector3.Distance(transform.position, player.position);
 
@@ -49,7 +49,6 @@ public class TeleportChaser : MonoBehaviour
             agent.SetDestination(player.position);
         }
 
-        // 애니메이션 처리
         float velocity = agent.velocity.magnitude;
         bool isWalking = velocity > 0.1f;
 
@@ -122,16 +121,5 @@ public class TeleportChaser : MonoBehaviour
 
         int index = Random.Range(0, footstepClips.Length);
         footstepSource.PlayOneShot(footstepClips[index]);
-    }
-
-    private void OnDrawGizmos()
-    {
-        // 추적 범위 (파란색)
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, followRange);
-
-        // 게임 오버 거리 (빨간색)
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, gameOverDistance);
     }
 }
