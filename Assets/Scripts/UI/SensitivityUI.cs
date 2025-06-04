@@ -14,6 +14,7 @@ public class SensitivityUI : MonoBehaviour
     {
         float savedSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", 100f);
         sensitivitySlider.value = savedSensitivity;
+        playerLook.SetSensitivity(savedSensitivity);
         UpdateSensitivityUI(savedSensitivity);
     }
 
